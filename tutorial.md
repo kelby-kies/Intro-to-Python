@@ -70,8 +70,26 @@ Not sure if I am good at programming of good at googling picture
 ### Variables
 define a variable; explain that this variable holds a value
 ### Lists
+We can group objects together in a 'list' 
+A list is defined by using [] and separating each object with a ,
+
+x = [1,2,3,4,]
+
+y = ['Hello', 'How', 'are', 'you', 'today?']
+
+You can index a list similar to how we index a string to select a specific character. 
+(A string is just a list of characters.)
+
+We can add and remove objects from a list. 
+To add: append(), extend() -> puts 2 lists together. 
+TO remove: 
+
+
+
 ### Dictionaries
-### Print
+A dictionary is a collection of key & values pairs. 
+You can look up the value of a key using the command: dictionary[key]
+How to add a new value to a list: dictionary[key] = new_value
 
 
 
@@ -85,19 +103,61 @@ define a variable; explain that this variable holds a value
 
 ### Functions
 
+#### What is a function?
+a function is a chunk of code that takes input values and performs a 'function' on it to get an output. Some functions are simple, but some can be complicated. 
+
+#### Structure of a function
+ def function_name(input, values)
+ {
+ output_value = input * values
+ return outpput_value
+ }
+ TO call a function: 
+ function_name(2,4)
+ 
+#### Built in Python functions
+Python has many built in functions. One example is print(value)
+value is the input value into print and the print function will take that value and print it to the standard out. 
+
+#### Importing new functions using Libraries
+One can import a library with < import package_name> to load all of the functions of that package. 
+
+Popular packages used by Biologists: 
+
+* NumPy
+* Pandas
+* BioPython
+
+ 
+
+## Visualizations (2nd hour)
+citation: https://www.analyticsvidhya.com/blog/2021/02/an-intuitive-guide-to-visualization-in-python/
+
+one of the most utilized features in Python
+
+**Python Packages for Visualization:**
+
+* **Matplotlib**: uses numPy; comes with a wide variety of plots like line, bar, scatter, historgram, etc.; John Hunter 2022
+* **Seaborn**: dataset oriented library for making statistical representations in Python; uses Pandas data structures; 
+* **plotly**: interactive, open-source, high-level, declarative and browsers-abased visualization library for Python. scientifc chars, 3D graphs, statistical charts, financial charts; 
+* **ggplot**: grammar of graphics implemented in Python; mapping of data to asthetic attributes and geometric objects. 
 
 
+###How to use the right visualization?
+depends on the data type and the question you are asking. 
 
-## Example Bioinformatics task (2nd hour)
+**Different types of graphs:** 
 
+* bar graphs:
+	* **bar chart** ( horizontal) : used to compare metric values across diff. subgroups of data. more groups is better for a bar chart.
+	* **column chart** (vertical):  used to compare a single category of data between individual sub-items
+	* **grouped bar chart**: used to compare values in certain groups and sub-groups
+	* **stacked bar chart**: compare the total sizes across the available groups and composition of different subgroups. 
+* **line chart**: used to represent continuous data; trend across time. 
+* **histogram**: observe distribution of a single variale with a few data points. 
+* **scatter plot**: idetntify relations between 2 variables. can be used when the dependent(y) variable can have multiple values for the independtnt(x) variable. 
+* **box plot**: used to show shape of distribution and the sumamry of the data. 
 
-
-## Visualizations
-
-
-## Numpy: kind of understand
-## Pandas: Need to review
-## Biopython: I know very little
 
 
 
