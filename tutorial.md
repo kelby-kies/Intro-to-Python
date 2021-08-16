@@ -28,9 +28,9 @@ Please install Anaconda using the *Installing _ Anaconda_Python.pdf* tutorial in
 
 ## Python is Awesome & here's why!
 ### What is Python?
-"Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms." (1)
+"Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming. Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for scripting and rapid application development in many areas on most platforms." *-Python.org*
 
-<funny python meme>
+![python!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/images.jpeg )
 
 
 ### Pros & Cons
@@ -619,10 +619,9 @@ This version has only the complete observations, without missing entries for any
 
 
 ##Citations: 
-This tutorial was based on Paul Villanueva's 2018 Python tutorial <https://nbviewer.jupyter.org/github/pommevilla/p3.bootcamp.python.2018/blob/master/lessons/P3Bootcamp2018-00.ipynb> & BCB546 class material <https://eeob-biodata.github.io/BCB546X-python/>
-
-1. <https://docs.python.org/3.6/tutorial/>
-2. <https://www.analyticsvidhya.com/blog/2021/02/an-intuitive-guide-to-visualization-in-python/>
-3. https://seaborn.pydata.org/generated/seaborn.distplot.html
+1. Based on Paul Villanueva's 2018 Python tutorial <https://nbviewer.jupyter.org/github/pommevilla/p3.bootcamp.python.2018/blob/master/lessons/P3Bootcamp2018-00.ipynb>
+2. Used BCB546 class material <https://eeob-biodata.github.io/BCB546X-python/>
+3. <https://docs.python.org/3.6/tutorial/>
+4. <https://www.analyticsvidhya.com/blog/2021/02/an-intuitive-guide-to-visualization-in-python/>
 
 
