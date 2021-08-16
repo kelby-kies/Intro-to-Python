@@ -1,12 +1,15 @@
 # Introduction to Python Workshop
 Hosted by the BCB-GSO
 
-Written by Kelby Kies
- 
 August 16, 2021
 
+Written by Kelby Kies
+
+Tuteja Lab
+ 
+
 ## Purpose
-The purpose of this workshop is not to turn you into a computer scientist or an expert Python programmer. The purpose of this workshop is to introduce you to basic syntax/commands of Python and to give you examples of how Python is used in different biological contexts. 
+The purpose of this workshop is not to turn you into a computer scientist or an expert Python programmer. The purpose of this workshop is to introduce you to basic syntax/commands of Python and to give you examples of how Python can be used to visualize data. 
 
 ## Outline
 * Getting started: 15 minutes
@@ -42,7 +45,7 @@ Please install Anaconda using the *Installing _ Anaconda_Python.pdf* tutorial in
 |versatile|high memory consumption|
 |easy to use||
 |fast to develop||
-|Has a ton of libraries (Pandas, NumPY, BioPython etc. )||
+|Has a ton of packaages (Pandas, NumPY, BioPython etc. )||
 
 ### Where to get help on Python
 - <https://www.python.org>
@@ -132,7 +135,7 @@ The `**` operator in Python is used to raise the number on the left to the power
 	
 	12 ** 2
 	
-The modulus operator returns the remainder left over after dividing the left hand number by the right hand number. 
+The `modulus operator (%)` returns the remainder left over after dividing the left hand number by the right hand number. 
 
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/image-196.png)
 
@@ -143,12 +146,14 @@ Try this on your own!
 Here you should get an output of `2` because 5 will go into 12 at most 2 times and there is a remainder of 2 left over. 
 
 
-The **Order of Operations** are the same as normal math in Python.
+The **Order of Operations** are the same as normal math in Python. Think PEMDAS!
 
 	# First the sum within the parentheses will be exectued
 	# This quantity is then multiplied
 	# The resulting quantity is then subtracted from 100
 	100 - (4+3) * 2
+
+
 
 ### Variables
 A variable is a way we can store a value in memory to be used later on. 
@@ -229,7 +234,7 @@ If we want to get the last character of a string we can use `-1`
 	print(school[-1])
 	
 	
-We can *subset* a chunk of a string using `str[start:end]`. This will index the given `string` at from the`start` poisition and return each character up until the `end-1` position. 
+We can *subset* a chunk of a string using `str[start:end]`. This will index the given `string` at the`start` position and return each character up until the `end-1` position. 
 
 	print(school[0:4])
 
@@ -314,13 +319,14 @@ We can define a dictionary by using `dict()` or by using `{ }`. To add a new val
 	# defining the gene_ontologies dictionary with dict()
 	gene_ontologies = dict()
 	# Let's add new values to gene_ontologies.
-	gene_ontologies['mesenchymal to epithelial transition'] = 'Stat1'
-	gene_ontologies['mesenchymal to epithelial transition'] = 'Bmp4'
-	gene_ontologies['mesenchymal to epithelial transition'] = 'Sall1'
-	
+	gene_ontologies = dict()
+	# Let's add new values to gene_ontologies.
+	gene_ontologies['mesenchymal to epithelial transition'] = ['Stat1','Bmp4', 'Sall1']
+
+	# Notice when we add only single values, it will overwrite what is there. 
 	gene_ontologies['angiogenesis'] = 'Nrarp'
 	gene_ontologies['angiogenesis'] = 'Adam15'
-	
+
 	print(gene_ontologies)
 	
 	# Let's define a new dictionary by using {}
@@ -376,9 +382,12 @@ To call a function you must use the give name with `()`:
  
 #### Built in Python functions
 Python has many built in functions. 
+
 Example 1:`print(value)`. Here the variable named `value` is the input value into the `print()` and the print function will take that value and print it to the standard out. 
 
 Example 2:`abs(-14)`. Here the `-14` is the input value into the `abs()`. `abs()` will return the absolute value of whatever object is passed into it. 
+
+Example 3: `len('string')`. The length function is used to find the length of a give string or list. 
 
 #### Importing new functions using Packages
 One can import a package with `import <package_name>` to load all of the functions of that package. 
@@ -400,7 +409,7 @@ It all depends on the type of data and the question you are trying to answer!
 ###Python Packages for Visualization:
 * **Seaborn**: dataset oriented package for making statistical representations in Python; uses Pandas data structures; 
 * **Matplotlib**: uses numPy; comes with a wide variety of plots like line, bar, scatter, historgram, etc.; John Hunter 2022
-* **plotly**: interactive, open-source, high-level, declarative and browsers-abased visualization package for Python. scientifc chars, 3D graphs, statistical charts, financial charts; 
+* **plotly**: interactive, open-source, high-level, declarative and browser-based visualization package for Python. scientifc charts, 3D graphs, statistical charts, financial charts; 
 * **ggplot**: grammar of graphics implemented in Python; mapping of data to asthetic attributes and geometric objects. 
 
 For today's workshop, we will be use **Seaborn** and **Matplotlib**.
@@ -417,11 +426,11 @@ For today's workshop, we will be use **Seaborn** and **Matplotlib**.
 		import pandas as pd
 		import matplotlib.pyplot as plt
 		import seaborn as sns
+	Note: When we import a package we can give it an *alias* such as `pd`. This is just a shortcut way to use this package's functions later on. 
 		
 3. Now we should import the data that we will be working with into a `pandas` dataframe.
 	* Pandas DataFrames: is a tabular data structure comprised of rows and columns, akin to a spreadsheet, database table, or R's data.frame object. 
 
-	<https://docs.google.com/presentation/d/1FXN4I3zsVOVu2twOx5U9W7L0LG8v01Ok0M2aEzAnnqY/edit#slide=id.g4f992337a5_1_105>
 	
 			# Here is a general way to read in data (.csv file) into a Pandas 			dataframe
 			df = pd.read_csv('data.csv')
@@ -430,6 +439,7 @@ Once imported, the dataframe will look similar to this:
 
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/dataframe.png)
 		
+You can learn more on how to use the Pandas package here: <https://pandas.pydata.org>
 		
 ### Now, Let's look at some different types of graphs:
 
@@ -445,15 +455,15 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 	gender = pd.read_csv('data/EntriesGender.csv')
 	gender
 
-* **bar chart** (horizontal) : used to compare metric values across diff. subgroups of data. more groups is better for a bar chart.
+* **bar chart** (vertical) : used to compare metric values across diff. subgroups of data. more groups is better for a bar chart.
 
 		""" 
 		Description of basic bar chart:
-		sns.barplot(xAxis,yAxis)
-		plt.title('Plot Title')
-		plt.xlabel('X-Axis subtitle')
-		plt.ylabel('Y-Axis subtitle')
-		plt.show()
+			sns.barplot(xAxis,yAxis)
+			plt.title('Plot Title')
+			plt.xlabel('X-Axis subtitle')
+			plt.ylabel('Y-Axis subtitle')
+			plt.show()
 		"""
 		# Let's choose a country and see how many medals they won
 		# In this example, let's choose Japan
@@ -470,7 +480,7 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/medals_bar.png)
 		
 		
-* **column chart** (vertical):  used to compare a single category of data between individual sub-items
+* **column chart** (horizontal):  used to compare a single category of data between individual sub-items
 
 		"""
 		Description of basic column chart:
@@ -490,7 +500,7 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 		sns.barplot(x=num_of_medals, y=medals_won, orient = "h")
 		plt.title('Brazils Olympic Medals')
 		plt.xlabel('# of Medals')
-		plt.ylabel('# of Medals')
+		plt.ylabel('Medals')
 		plt.show()
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/medals_column.png)
 		
@@ -520,10 +530,12 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 			gender = pd.read_csv('data/EntriesGender.csv')
 			gender
 			
+			# Select the columns we care about
 			gender = gender[['Discipline', 'Female', 'Male']]
 			ten_sports = gender.sample(n=10)
 			
 			# Create Stacked Bar chart using Matplotlib
+			# The stacked parameter needs to be set to True to create a stacked bar graph
 			ten_sports.plot(x='Discipline', kind='bar', stacked=True,
 			title='Gender Composition per sport')
 			
@@ -573,7 +585,6 @@ To demonstrate the use of **line chart**, **histogram** & **box plot**, we will 
 
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/hist_red.png)		
 		
-		
 		# We can change the bin size using the bins parameter
 		# It is a good idea to try different bin sizes to get an overall feel for the data distribution. 
 		sns.displot(life['Life expectancy'], bins=100).set(title='Distribution of Life expectancy')
@@ -583,7 +594,7 @@ To demonstrate the use of **line chart**, **histogram** & **box plot**, we will 
 		
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/hist_bin2.png)	
 
-For our last visualization we will use a dataset retrieved from the Portal Teaching data. This data is a subset from the ecological study by Ernst et al. (2009): Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA.
+For our last visualization we will use a dataset retrieved from the Portal Teaching database. This data is a subset from the ecological study by Ernst et al. (2009): Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA.
 This version has only the complete observations, without missing entries for any of the columns. 
 <https://figshare.com/collections/Long-term_monitoring_and_experimental_manipulation_of_a_Chihuahuan_Desert_ecosystem_near_Portal_Arizona_USA/3301073>
 
