@@ -8,8 +8,6 @@ August 16, 2021
 ## Purpose
 The purpose of this workshop is not to turn you into a computer scientist or an expert Python programmer. The purpose of this workshop is to introduce you to basic syntax/commands of Python and to give you examples of how Python is used in different biological contexts. 
 
-< No Pythons were used in the making of this tutorial.>
-
 ## Outline
 * Getting started: 15 minutes
 * Python is Awesome & here's why!: 5-10 minutes
@@ -19,11 +17,13 @@ The purpose of this workshop is not to turn you into a computer scientist or an 
 ## Getting Started
 ### Downloading the GitHub repository
 1. Go to <https://github.com/kelby-kies/Intro-to-Python>
-2. Click on the green Code button that has a little download symbol. (pic)
+2. Click on the green Code button that has a little download symbol.
+![launch_anaconda!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/code_button.png )
 3. Click 'Download Zip'. This should download the entire repository (folder) to your downloads folder. I recommend moving this folder to the Desktop or somewhere easy to find. 
+![launch_anaconda!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/download_zip.png )
 
 ### Installation
-Please install Anaconda using the 'Installing_Anaconda_Python' tutorial in this repository if you have not done so already. 
+Please install Anaconda using the *Installing _ Anaconda_Python.pdf* tutorial in this repository if you have not done so already. 
 
 
 ## Python is Awesome & here's why!
@@ -45,9 +45,8 @@ Please install Anaconda using the 'Installing_Anaconda_Python' tutorial in this 
 |Has a ton of libraries (Pandas, NumPY, BioPython etc. )||
 
 ### Where to get help on Python
-- http://www.python.org
-- Your BCB-GSO Tutorial! Or any other tutorial out there
-- https://wiki/python.org/moin/BeginnersGuide/Programmers
+- <https://www.python.org>
+- Your BCB-GSO Tutorial! Or any other tutorial out there 
 - Google! (This goes for anything in grad school. Google is your friend.) 
 
 ![launch_anaconda!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/google.jpg )
@@ -67,13 +66,13 @@ Please install Anaconda using the 'Installing_Anaconda_Python' tutorial in this 
 ![launch_anaconda!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/launch_anaconda.png )
 2. Launch a new Jupyter Notebook
 ![open_jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/launch_jupyter_notebook.png )
-3. Navigate to the 'Intro-to-Python' directory that we just cloned from GitHub
+3. Navigate to the *Intro-to-Python* directory that we just downloaded from GitHub
 ![nvaigate_to_tutorial!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/navigate_to_directory_1.png )
 ![nvaigate_to_tutorial!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/navigate_to_directory_2.png )
 4. Open a new Jupyter Notebook file. 
 ![nvaigate_to_tutorial!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/open_jupyter_notebook.png )
 
-#### Description of Jupyter Notebook
+#### Description of a Jupyter Notebook
 
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/Jupyter_notebook.png )
 
@@ -90,11 +89,11 @@ Let's try a quick example. Copy & Paste the line below into a 'In[]:' line.
 	
 Click the 'Run' button. 
 
-We can see that Hello World is printed out on a new line. Notice that the line: # Let's write our first program did not print. This is because this line is commented out using #. Comments are used for good documentation in ANY language! 
+We can see that Hello World is printed out on a new line. Notice that the line: `# Let's write our first program` did not print. This is because this line is commented out using #. Comments are used for good documentation and good documentation is important when coding in in ANY language! 
 
 
 ### Arithmetic
-We can use python as a basic calculator. Let's run some basic calculations below The code lines indicated with a # are just comments. They are not actual commands being run and won't print out anything.
+We can use python as a basic calculator. Let's run some basic calculations below.
 
 Add numbers with a `+` sign
 
@@ -144,9 +143,9 @@ Try this on your own!
 Here you should get an output of `2` because 5 will go into 12 at most 2 times and there is a remainder of 2 left over. 
 
 
-The Order of Operations is the same as normal math in Python.
+The **Order of Operations** are the same as normal math in Python.
 
-	# First the sum within the parenthese will be exectued
+	# First the sum within the parentheses will be exectued
 	# This quantity is then multiplied
 	# The resulting quantity is then subtracted from 100
 	100 - (4+3) * 2
@@ -154,7 +153,7 @@ The Order of Operations is the same as normal math in Python.
 ### Variables
 A variable is a way we can store a value in memory to be used later on. 
 
-Here I am storing the value 2 in memory with the name 'x'. 
+Here I am storing the value 2 in memory with the name `x`. 
 
 	x = 2
 	# When we print x the variable x, we should get 2. 
@@ -164,9 +163,10 @@ We can later change the value of the variable or use it in a function as well.
 
 	x = (x * 2)/12 + 10
 	print(x)
+	
 What is the value of x now? 
 
-It is generally good practice to make your variable name descriptive. For example, below is a list of countries. It would be hard to know what kind of values the variable holds if we called it x. Let's give it a more descriptive name like *countries*
+It is generally good practice to make your variable name descriptive. For example, below is a list of countries. It would be hard to know what kind of values the variable holds if we called it `x`. Let's give it a more descriptive name like `countries`.
 	
 	countries = ['Japan', 'Mexico', 'Russia', 'Belgium', 'Venezuela']
 	
@@ -194,23 +194,27 @@ Strings can be assigned to a variable as well.
 
 	blue_sky = "The sky is blue."
 	
-We can print a string to the standard out or 'make it literal' by using print. 
+We can print a string to the screen or 'make it literal' by using `print()`. 
 
 	print("Python is Awesome!")
+	
+We can the length of a string using `len()`. 
+
+	print(len(school))
 	
 ####Indexing a String:
 Because a string is just a collection of characters we are able to *index* a string to get a specific character. 
 
-	# Assign string to variable
+	# Assign a string to variable
 	school = "Iowa State University"
 	# print full string
 	print(school)
 	
-Great! Now let's print the W!
+Great! Now let's print the W in Iowa!
 
-To print out the 'W', we need to take our variable that we assigned a string value (in this case school) and *index* it with a specific number. 
+To print out the 'W', we need to take our variable that we assigned a string value (in this case `school`) and *index* it with a specific number. 
 
-To *index* means you are telling the Python interpreter to go to that position in the string and pull out that character. 
+To *index* means you are telling the Python interpreter to go to that position in the string and pull out the character in that position. 
 
 	print(school[2])
 	
@@ -218,21 +222,20 @@ Yes! Awesome you printed the W, but WAIT! Did you notice that the W is the 3rd l
 
 This is because Python is '0-based', which means that when looking for the character we want to pull out we start counting at 0 rather than 1! This is VERY important because other languages can be different and can lead to problems!
 
+![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/1wr90mjnil60r7226bgq.png)
+
 If we want to get the last character of a string we can use `-1`
 
 	print(school[-1])
 	
-We can the length of a string using `len()`. 
-
-	print(len(school))
 	
-We can subset a chunk of a string using `str[start:end]`. This will retun the subset of the given `str` return every character between `start` and `end-1`. 
+We can *subset* a chunk of a string using `str[start:end]`. This will index the given `string` at from the`start` poisition and return each character up until the `end-1` position. 
 
 	print(school[0:4])
 
 ### Lists
 We can group objects(ints, doubles, strings, etc) together into a `list` 
-A list is defined by using [ ] and separating each object with a ,
+A list is defined by using `[ ]` and separating each object with a `,`
 
 	list_1 = [1,2,3,4]
 	print(list_1)
@@ -240,7 +243,7 @@ A list is defined by using [ ] and separating each object with a ,
 	print(list_2)
 	
 
-You can index a list similar to how we index a string to select a specific character. (A string is just a list of characters.)
+You can index a list the same way we index strings by passing in a position number in `[]`. This will select a specific object from your list. (A string is just a list of characters.)
 
 	list_1[2]
 	list_1[-1]
@@ -249,8 +252,8 @@ We can also index a string within a list of strings. Lets say I want to get the 
 	
 	list_2[4][-1]
 
-We can add and remove objects from a list. 
-To add a single object to a list use `append`. 
+We can *add* and *remove* objects from a list. 
+To *add* a single object to a list use `append`. 
 
 	list_1.append(15)
 	print(list_1)
@@ -276,38 +279,37 @@ If we wanted to add more than 1 object, we can use `extend`.
 	print(list_2)
 	
 	
-We can even add 2 pre-defined lists together and assign to a new list name
+We can even add 2 pre-defined lists together and assign to a new list name!
 
 	new_list = list_1.extend(list_2)
 	print(new_list)
 
-To remove objects from a list:
+To *remove* objects from a list:
 
 * Remove all items: `clear()`
 
-
-	`list_1.clear()`
-	`print(list_1)`
+		list_1.clear()
+		print(list_1)
 
 * Remove an item by index and get its value: `pop()`
 
-	`print(list_2)`
-	`#Let's remove the 3rd element in list_2`
-	`print(list_2.pop(2))`
-	`print(list_2)`
+		print(list_2)
+		#Let's remove the 3rd element in list_2
+		print(list_2.pop(2))
+		print(list_2)
 	
 	If we don't pass in an index into `pop()` then the last element is deleted. 
 
 * Remove an item by value: `remove()`
 
-	`#Let's remove Happy Monday from the new_list`
-	`new_list.remove('Happy Monday!')`
+		#Let's remove Happy Monday from the new_list
+		new_list.remove('Happy Monday!')
 	
 
 ### Dictionaries
-A dictionary is a collection of `key:values` pairs. One key can have multiple values. Dictionaries in Python are similar to dictionaries in real life. For a real dictionary we can look up the definition (value) of a specific word (key). THis is similar in Python; we can look up the values attached to the desired key using the command: `dictionary[key]`
+A dictionary is a collection of `key:values` pairs. One key can have multiple values. Dictionaries in Python are similar to dictionaries in real life. For a real dictionary we can look up the definition (value) of a specific word (key). This is similar in Python; we can look up the values attached to the desired key using the command: `dictionary[key]`
 
-We can define a dictionary by using `dict()` or by using { }. To add a new value to a dictionary: `dictionary[key] = new_value`.
+We can define a dictionary by using `dict()` or by using `{ }`. To add a new value to a dictionary: `dictionary[key] = new_value`.
 
 	# defining the gene_ontologies dictionary with dict()
 	gene_ontologies = dict()
@@ -332,16 +334,16 @@ We can define a dictionary by using `dict()` or by using { }. To add a new value
 	
 Dictionaries are useful because we can look up a value by using the key. 
 
-	# Let's see the gene's that correspond to Mesenchymal to Epithelial Transition. 
+	# Let's see the genes that correspond to 'Mesenchymal to Epithelial Transition'. 
 	print(gene_ontologies['mesenchymal to epithelial transition'])
 	
-We can also see if a sepcific key exists within a dictionary. 
+We can also see if a specific key exists within a dictionary. 
 	
 	"Drama" in movies_2021
 	"angiogenesis" in gene_ontologies
 
 
-### Exercise #2
+### Exercise #2:
 1. Make a list of your 3 favorite foods and assign to a variable called `food`. Print. your list using the variable name.  
 2. Now add your 1 of your neighbor's favorite foods to your list. For those of you that are virtual feel free to type a food in the chat or add my favorite food `'chocolate'.`Print your updated list.
 3. Access the `chocolate` element and print the middle `o` character.
@@ -352,13 +354,22 @@ We can also see if a sepcific key exists within a dictionary.
 
 ### Functions
 #### What is a function?
-a function is a chunk of code that takes input values and performs a 'function' on it to get an output. Some functions are simple, but some can be complicated. 
-#### Structure of a function
+-a function is a chunk of code that takes input values and performs a 'function' on it to get an output. Some functions are simple, but some can be complicated. 
+
+#### Basic Structure of a function
+To define a function Python uses `def`.
+
 	def function_name(input, values)
 	{
-	output_value = input * values
-	print(output_value)
+		# This function takes 2 input parameters (input, values)
+		# And generates an output value. 
+		
+		output_value = input * values
+		
+		# This output value is returned or printed. 
+		print(output_value)
 	}
+	
 To call a function you must use the give name with `()`: 
 
 	function_name(2,4)
@@ -370,18 +381,15 @@ Example 1:`print(value)`. Here the variable named `value` is the input value int
 Example 2:`abs(-14)`. Here the `-14` is the input value into the `abs()`. `abs()` will return the absolute value of whatever object is passed into it. 
 
 #### Importing new functions using Packages
-One can import a package with < import package_name> to load all of the functions of that package. 
+One can import a package with `import <package_name>` to load all of the functions of that package. 
 
 **Popular packages used by Biologists:**
 
 * **NumPy**: "NumPy is the fundamental package for scientific computing in Python. It is a Python package that provides a multidimensional array object, various derived objects (such as masked arrays and matrices), and an assortment of routines for fast operations on arrays, including mathematical, logical, shape manipulation, sorting, selecting, I/O, discrete Fourier transforms, basic linear algebra, basic statistical operations, random simulation and much more." <https://numpy.org/doc/stable/user/absolute_beginners.html>
 * **Pandas**: "Pandas is a fast, powerful, flexible and easy to use open source data analysis and manipulation tool, built on top of the Python programming language." <https://pandas.pydata.org/docs/getting_started/index.html#getting-started>
-* **Biopython**: "The goal of Biopython is to make it as easy as possible to use Python for bioinformatics by creating high-quality, reusable modules and classes. Biopython features include parsers for various Bioinformatics file formats (BLAST, Clustalw, FASTA, Genbank,...), access to online services (NCBI, Expasy,...), interfaces to common and not-so-common programs (Clustalw, DSSP, MSMS...), a standard sequence class, various clustering modules, a KD tree data structure etc. and even documentation."<http://biopython.org/DIST/docs/tutorial/Tutorial.html>
+* **Biopython**: "The goal of Biopython is to make it as easy as possible to use Python for bioinformatics by creating high-quality, reusable modules and classes. Biopython features include parsers for various Bioinformatics file formats (BLAST, Clustalw, FASTA, Genbank,...), access to online services (NCBI, Expasy,...), interfaces to common and not-so-common programs (Clustalw, DSSP, MSMS...), a standard sequence class, various clustering modules, a KD tree data structure etc. and even documentation." <http://biopython.org/DIST/docs/tutorial/Tutorial.html>
 	* Fun Fact: Dr. Iddo Friedberg here at ISU helped create BioPython!
 
-## Pandas
-### Series
-### Dataframes
 
 ## Visualizations
 Scientists in all areas typically look at their results in the form of a graph. Visualizing data is one of the most utlized features in Python!
@@ -389,20 +397,17 @@ Scientists in all areas typically look at their results in the form of a graph. 
 ###When to use the right visualization?
 It all depends on the type of data and the question you are trying to answer!
 
-
 ###Python Packages for Visualization:
-
-* **Matplotlib**: uses numPy; comes with a wide variety of plots like line, bar, scatter, historgram, etc.; John Hunter 2022
 * **Seaborn**: dataset oriented package for making statistical representations in Python; uses Pandas data structures; 
+* **Matplotlib**: uses numPy; comes with a wide variety of plots like line, bar, scatter, historgram, etc.; John Hunter 2022
 * **plotly**: interactive, open-source, high-level, declarative and browsers-abased visualization package for Python. scientifc chars, 3D graphs, statistical charts, financial charts; 
 * **ggplot**: grammar of graphics implemented in Python; mapping of data to asthetic attributes and geometric objects. 
 
-For today's workshop, we will be using Matplotlib.
+For today's workshop, we will be use **Seaborn** and **Matplotlib**.
 
 1. Let's `install` the necessary packages.
 
         # Install Required Packages
-        # Note: This step only needs to be done once!
         !pip install pandas
         !pip install matplotlib
         !pip install seaborn
@@ -422,10 +427,11 @@ For today's workshop, we will be using Matplotlib.
 			df = pd.read_csv('data.csv')
 			
 Once imported, the dataframe will look similar to this:
-	< Picture of Pandas Data Frame >
+
+![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/dataframe.png)
 		
 		
-### Let's look at some different types of graphs:
+### Now, Let's look at some different types of graphs:
 
 To demonstrate the use of **bar graphs**, we will use data that contains the details of over 11,000 athletes, with 47 disciplines, along with 743 Teams taking part in the 2021(2020) Tokyo Olympics. This dataset contains the details of the Athletes, Coaches, Teams participating as well as the Entries by gender. It contains their names, countries represented, discipline, gender of competitors, name of the coaches. Source: Tokyo Olympics 2020 Website
 
@@ -441,23 +447,21 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 
 * **bar chart** (horizontal) : used to compare metric values across diff. subgroups of data. more groups is better for a bar chart.
 
-		# Let's select a country and see how many medals they won
-		country = medals.loc['Japan']
-		
-		# Because I can't figure out stupid Pandas
+		""" 
+		Description of basic bar chart:
+		sns.barplot(xAxis,yAxis)
+		plt.title('Plot Title')
+		plt.xlabel('X-Axis subtitle')
+		plt.ylabel('Y-Axis subtitle')
+		plt.show()
+		"""
+		# Let's choose a country and see how many medals they won
+		# In this example, let's choose Japan
 		medals_won = ['Gold', 'Silver', 'Bronze']
 		num_of_medals = [21,7,12]
-
-		"""
-		Description of basic bar chart:
-    	plt.bar(xAxis,yAxis)
-    	plt.title('title name')
-	    plt.xlabel('xAxis name')
-    	plt.ylabel('yAxis name')
-    	plt.show()
-		"""
 		
-		plt.bar(medals_won,num_of_medals)
+		# Create Bar plot using Seaborn
+		sns.barplot(x=medals_won, y=num_of_medals)
 		plt.title('Japans Olympic Medals')
 		plt.xlabel('Medals')
 		plt.ylabel('# of Medals')
@@ -470,23 +474,23 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 
 		"""
 		Description of basic column chart:
-		plt.barh(y_axis,x_axis)
-		plt.title('title name')
-		plt.ylabel('y axis name')
-		plt.xlabel('x axis name')
-		plt.show()
+			plt.barh(y_axis,x_axis)
+			plt.title('title name')
+			plt.ylabel('y axis name')
+			plt.xlabel('x axis name')
+			plt.show()
 		"""
-		# Let's select a different country and see how many medals they won
-		#country = medals.loc['Brazil']
-
-		# Because I can't figure out stupid Pandas
+		# Let's choose a country and see how many medals they won
+		# In this example, let's choose Brazil
 		medals_won = ['Gold', 'Silver', 'Bronze']
 		num_of_medals = [4,3,8]
 		
-		plt.barh(medals_won, num_of_medals)
+		# Create column chart using Seaborn
+		# Here we use the orient parameter to distinguish that the bars will be horizontal. 
+		sns.barplot(x=num_of_medals, y=medals_won, orient = "h")
 		plt.title('Brazils Olympic Medals')
-		plt.ylabel('Medals')
 		plt.xlabel('# of Medals')
+		plt.ylabel('# of Medals')
 		plt.show()
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/medals_column.png)
 		
@@ -501,7 +505,7 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 		del ten_countries['Total']
 		del ten_countries['Rank by Total']
 
-		# Plot Grouped Bar plot
+		# Plot Grouped Bar plot using Matplotlib
 		ten_countries.plot(x='Team/NOC',
                    kind='bar',
                    stacked=False,
@@ -512,14 +516,14 @@ To demonstrate the use of **bar graphs**, we will use data that contains the det
 * **stacked bar chart**: compare the total sizes across the available groups and composition of different subgroups. 
 
 			# Stacked Bar Plot
-			# Import EntriesGender.csv: this file has a breakdown of the # of men/			women athletes for each sport. 
+			# Import EntriesGender.csv: this file has a breakdown of the # of men/women athletes for each sport. 
 			gender = pd.read_csv('data/EntriesGender.csv')
 			gender
 			
-			# plot data in stack manner of bar type
-			gender = pd.read_csv('data/EntriesGender.csv')
 			gender = gender[['Discipline', 'Female', 'Male']]
 			ten_sports = gender.sample(n=10)
+			
+			# Create Stacked Bar chart using Matplotlib
 			ten_sports.plot(x='Discipline', kind='bar', stacked=True,
 			title='Gender Composition per sport')
 			
@@ -530,25 +534,24 @@ To demonstrate the use of **line chart**, **histogram** & **box plot**, we will 
 
 * **line chart**: used to represent continuous data; trend across time. 
 
-		# Line Plot
+		# Read in Life Expectancy data
 		life = pd.read_csv('data/Life_expectancy.csv')
+		
 		# Here's what our data looks like
 		print(life)
 
+		# Create Line Plot using Seaborn
 		sns.lineplot(data=life, x='Year', y='Life expectancy', 		hue='Entity').set(title='Life Expectancy Trend over 217 Years')
 		# Put the legend out of the figure
 		plt.legend(bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
 		plt.show()
 		
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/line_plot.png)
-	
-		
-		
 
 
-* **box plot**: used to show shape of distribution and the sumamry of the data. 
+* **box plot**: used to show shape of distribution and the summary of the data. 
 
-		# Let's show the summary of life expectancy for each country using a Box Plot
+		# Let's show the summary of life expectancy for each country using a Seaborn Box Plot
 		ax = sns.boxplot(x="Entity", y="Life expectancy", data=life)
 		# Set the title of the plot
 		ax.set_title('Summary of Life Expectancy for 15 Countries over 217 Years')
@@ -572,6 +575,7 @@ To demonstrate the use of **line chart**, **histogram** & **box plot**, we will 
 		
 		
 		# We can change the bin size using the bins parameter
+		# It is a good idea to try different bin sizes to get an overall feel for the data distribution. 
 		sns.displot(life['Life expectancy'], bins=100).set(title='Distribution of Life expectancy')
 		sns.displot(life['Life expectancy'], bins=10).set(title='Distribution of Life expectancy')
 		
@@ -579,21 +583,46 @@ To demonstrate the use of **line chart**, **histogram** & **box plot**, we will 
 		
 ![Jupyter_notebook!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/hist_bin2.png)	
 
-https://seaborn.pydata.org/generated/seaborn.distplot.html
+For our last visualization we will use a dataset retrieved from the Portal Teaching data. This data is a subset from the ecological study by Ernst et al. (2009): Long-term monitoring and experimental manipulation of a Chihuahuan Desert ecosystem near Portal, Arizona, USA.
+This version has only the complete observations, without missing entries for any of the columns. 
+<https://figshare.com/collections/Long-term_monitoring_and_experimental_manipulation_of_a_Chihuahuan_Desert_ecosystem_near_Portal_Arizona_USA/3301073>
 
 * **scatter plot**: identify relations between 2 variables. can be used when the dependent(y) variable can have multiple values for the independent(x) variable. 
 
 
+		# Import surveys_complete.csv
+		surveys = pd.read_csv('data/surveys_complete.csv', index_col=0)
+
+		# Graph Scatter plot using Seaborn
+		sns.lmplot(x="weight", y="hindfoot_length", data=surveys, fit_reg=False)
+		plt.title('Size of different species found in the Chihuahuan Desert')
+		plt.show()
+		
+![plot!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/scatter.png)
+
+
+		# Here we can distinguish between the different species using the hue parameter
+		sns.lmplot(x="weight", y="hindfoot_length", 
+           data=surveys, fit_reg=False, height=8,
+           aspect=1.5, scatter_kws={'alpha':0.5,"s": 50}, 
+           hue='species_id', markers='D')
+		plt.title('Size of different species found in the Chihuahuan Desert')
+		plt.show()
+		
+![plot!](/Users/kelbykies/Desktop/Intro-to-Python/pictures/scatter_species.png)
+
+
 ### Exercise #3
-1. Read in the 2nd dataset.
-2. Make a Bar plot
-3. Make a Box plot
-4. Make a scatter plot
+1. Using the Chihuahuan Desert ecosystem make a line plot comparing the hindfoot length of M/F over time. 
+
+2. Make a Box plot summary for each plot using the column `plot_id`.
+
 
 ##Citations: 
 This tutorial was based on Paul Villanueva's 2018 Python tutorial <https://nbviewer.jupyter.org/github/pommevilla/p3.bootcamp.python.2018/blob/master/lessons/P3Bootcamp2018-00.ipynb> & BCB546 class material <https://eeob-biodata.github.io/BCB546X-python/>
 
 1. <https://docs.python.org/3.6/tutorial/>
 2. <https://www.analyticsvidhya.com/blog/2021/02/an-intuitive-guide-to-visualization-in-python/>
+3. https://seaborn.pydata.org/generated/seaborn.distplot.html
 
 
