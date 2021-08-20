@@ -7,7 +7,6 @@ Written by Kelby Kies
 
 Tuteja Lab
  
-
 ## Purpose
 The purpose of this workshop is not to turn you into a computer scientist or an expert Python programmer. The purpose of this workshop is to introduce you to basic syntax/commands of Python and to give you examples of how Python can be used to visualize data. 
 
@@ -39,8 +38,7 @@ Please install Anaconda using the *Installing _ Anaconda_Python.pdf* tutorial in
 ### Pros & Cons
 |Pros | Cons | 
 |:-----|:----:|
-|efficient high level data structures|speed limitations|
-|support object oriented programming|issues with threading|
+|efficient high level data structures|support object oriented programming|issues with threading|
 |simple syntax|Not native to mobile environment|
 |versatile|high memory consumption|
 |easy to use||
@@ -205,7 +203,7 @@ We can print a string to the screen or 'make it literal' by using `print()`.
 	
 We can the length of a string using `len()`. 
 
-	print(len(school))
+	print(len(blue_sky))
 	
 ####Indexing a String:
 Because a string is just a collection of characters we are able to *index* a string to get a specific character. 
@@ -286,8 +284,7 @@ If we wanted to add more than 1 object, we can use `extend`.
 	
 We can even add 2 pre-defined lists together and assign to a new list name!
 
-	new_list = list_1.extend(list_2)
-	print(new_list)
+	list_1.extend(list_2)
 
 To *remove* objects from a list:
 
@@ -308,7 +305,8 @@ To *remove* objects from a list:
 * Remove an item by value: `remove()`
 
 		#Let's remove Happy Monday from the new_list
-		new_list.remove('Happy Monday!')
+		list_2.remove('Happy Monday!')
+		print(list_2)
 	
 
 ### Dictionaries
@@ -319,22 +317,19 @@ We can define a dictionary by using `dict()` or by using `{ }`. To add a new val
 	# defining the gene_ontologies dictionary with dict()
 	gene_ontologies = dict()
 	# Let's add new values to gene_ontologies.
-	gene_ontologies = dict()
-	# Let's add new values to gene_ontologies.
 	gene_ontologies['mesenchymal to epithelial transition'] = ['Stat1','Bmp4', 'Sall1']
 
 	# Notice when we add only single values, it will overwrite what is there. 
 	gene_ontologies['angiogenesis'] = 'Nrarp'
 	gene_ontologies['angiogenesis'] = 'Adam15'
-
 	print(gene_ontologies)
 	
-	# Let's define a new dictionary by using {}
+	#Let's define a new dictionary by using {}
 	movies_2021 = {
-		"comedy":"The Hitman's Bodyguard"
-		"Disney":"Cruella"
-		"Thriller": "Old"
-		}
+	"comedy":"The Hitman's Bodyguard",
+	"Disney":"Cruella",
+	"Thriller": "Old"
+	}
 	print(movies_2021)
 	
 	
@@ -363,18 +358,16 @@ We can also see if a specific key exists within a dictionary.
 -a function is a chunk of code that takes input values and performs a 'function' on it to get an output. Some functions are simple, but some can be complicated. 
 
 #### Basic Structure of a function
-To define a function Python uses `def`.
+To define a function Python uses `def`. Give your function a name that indicates what action it performs. Then you can pass in the variables/arguments by putting them in `()` after the function name. 
 
-	def function_name(input, values)
-	{
-		# This function takes 2 input parameters (input, values)
-		# And generates an output value. 
-		
-		output_value = input * values
-		
-		# This output value is returned or printed. 
-		print(output_value)
-	}
+Everything that is *inside* of your function needs to be indented or Python will error. To end the function you can `print()` or `return()` the output!
+
+	def function_name(input, values):
+    	# This function takes 2 input parameters (input, values)
+    	# And generates an output value. 
+    	output_value = input * values
+    	# This output value is returned or printed. 
+    	print(output_value)
 	
 To call a function you must use the give name with `()`: 
 
@@ -431,7 +424,8 @@ For today's workshop, we will be use **Seaborn** and **Matplotlib**.
 3. Now we should import the data that we will be working with into a `pandas` dataframe.
 	* Pandas DataFrames: is a tabular data structure comprised of rows and columns, akin to a spreadsheet, database table, or R's data.frame object. 
 
-	
+Example Code:
+
 			# Here is a general way to read in data (.csv file) into a Pandas 			dataframe
 			df = pd.read_csv('data.csv')
 			
